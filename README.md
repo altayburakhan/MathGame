@@ -4,7 +4,8 @@
 Hypercasual Game 
 
 
-They are used when adding the transactions from above to the inventory and clicking on them.
+Add transactions falling from above to inventory and use them to breaking the walls.
+
 
 ![](https://user-images.githubusercontent.com/54476824/136029507-ac68ffd4-c7f9-4ea5-8d83-d6af589ea321.png)
 ------------------------------------------------------
