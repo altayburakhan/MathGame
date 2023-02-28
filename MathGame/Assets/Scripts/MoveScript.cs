@@ -1,16 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class MoveScript : MonoBehaviour
 {
     
     public float speed;
     private float x;
     Rigidbody2D body;
-
-    
-    
     
     void Start() 
     {
@@ -21,20 +17,20 @@ public class MoveScript : MonoBehaviour
         x = Input.GetAxisRaw("Horizontal");
         
     }
-    void FixedUpdate() 
+    /*void FixedUpdate() 
     {
         body.velocity = new Vector2(x * speed,0);
-    }
+    }*/
     public void right()
     {
          
-           transform.Translate(Vector2.right * speed * 6 *  Time.deltaTime);
+           transform.Translate(Vector2.right * 1.7f);
        
     }
     public void left()
     {
         
-           transform.Translate(Vector2.left * speed * 6 * Time.deltaTime);
+           transform.Translate(Vector2.left * 1.7f );
        
     }
     

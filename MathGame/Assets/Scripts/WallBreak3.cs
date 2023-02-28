@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallBreak3 : MonoBehaviour
+public class WallBreak3 : GameManager
 {
      public GameObject txt3;
     public int cnt3;
@@ -15,7 +15,7 @@ public class WallBreak3 : MonoBehaviour
         ad3 = GameObject.Find("PointText(Clone)");    
     }    
 
-    private void OnTriggerEnter2D(Collider2D wll) 
+    protected void OnTriggerEnter2D(Collider2D wll) 
     {
         if (wll.CompareTag("Player"))
         {
@@ -23,7 +23,8 @@ public class WallBreak3 : MonoBehaviour
             {
                 txt3.GetComponent<Point>().mainpoint -= 60;
                 Destroy(ad3);
-                Destroy(gameObject); 
+                Destroy(gameObject);
+                wallBreakCount++;
             }
             if (cnt3 < 60)
             {

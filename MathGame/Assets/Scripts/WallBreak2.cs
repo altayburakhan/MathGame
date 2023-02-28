@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallBreak2 : MonoBehaviour
+public class WallBreak2 : GameManager
 {
     public GameObject txt2;
     public int cnt2;
@@ -22,7 +22,8 @@ public class WallBreak2 : MonoBehaviour
             {
                 txt2.GetComponent<Point>().mainpoint -= 55;
                 Destroy(ad2);
-                Destroy(gameObject); 
+                Destroy(gameObject);
+                wallBreakCount++;
             }
             if (cnt2 < 55)
             {

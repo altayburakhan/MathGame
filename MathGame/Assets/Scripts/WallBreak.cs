@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class WallBreak : MonoBehaviour
+public class WallBreak : GameManager
 {
     public GameObject txt;
     public int cnt;
@@ -28,7 +28,8 @@ public class WallBreak : MonoBehaviour
             {
               txt.GetComponent<Point>().mainpoint -= 40;
               Destroy(ad);
-              Destroy(gameObject);  
+              Destroy(gameObject);
+              wallBreakCount++;
             }
             
             if (cnt < 40)
